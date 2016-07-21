@@ -53,8 +53,7 @@ class RandomTelemetry(object):
 		kv["PackAmph"] = "%f" % uniform(0, 32)
 
 		kv["DischargeEnable"] = "%d" % randint(0, 1)
-		print kv.items()
 		out = '@'
 		outList = ["%s=%s" % (k, v) for k, v in kv.items()]
-
 		out += '&'.join(outList) + '@'
+		return out
